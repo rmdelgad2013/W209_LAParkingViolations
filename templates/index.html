@@ -75,48 +75,77 @@
 
     <section id="overview">
         <h2>Overview</h2>
-        <p>Content goes here</p>
+        <p>Los Angeles is well-known as a commuter city. WIth the residents’ heavy reliance on cars, it is no surprise
+            that the city also collects a hefty amount of parking ticket revenue -
+            <a href="https://www.govtech.com/data/How-Did-LA-Spend-148-Million-in-Parking-Ticket-Revenue-Check-Data-Portal.html">$148 million </a>
+            in fiscal year 2015. The city’s street parking rules can seem like an enigma - often there are three or four
+            posted signs showing seemingly contradictory information on the allowed parking times of any given street.
+        </p>
+
+        <p>These tools allow users to determine the best times to park in different areas of Los Angeles, and allows for
+            comparison the fine amounts and the likelihood of getting ticketed in various neighborhoods and streets within
+            the city.  We have created several dashboards which allow the user to view different measures across a map of
+            the city.  The <a href="https://www.kaggle.com/cityofLA/los-angeles-parking-citations">underlying data </a>
+            is provided by the City of Los Angeles and hosted on Kaggle.
+        </p>
     </section>
 
     <section id="dashboard-1">
         <h2>Citation Counts by Zip Dashboard</h2>
-        <div class='tableauPlaceholder' id='viz1555266095248' style='position: relative'>
-            <noscript>
-                <a href='#'>
-                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SamplePrototype&#47;Recentiteration&#47;1_rss.png' style='border: none' />
-                </a>
-            </noscript>
-            <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                <param name='embed_code_version' value='3' />
-                <param name='site_root' value='' />
-                <param name='name' value='SamplePrototype&#47;Recentiteration' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SamplePrototype&#47;Recentiteration&#47;1.png' />
-                <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-            </object>
-        </div>
-        <script type='text/javascript'>
-            var divElement = document.getElementById('viz1555266095248');
-            var vizElement = divElement.getElementsByTagName('object')[0];
-            if ( divElement.offsetWidth > 800 ) {
-                vizElement.style.width='1000px';
-                vizElement.style.height='1027px';
-            } else if ( divElement.offsetWidth > 500 ) {
-                vizElement.style.width='1000px';vizElement.style.height='1027px';
-            } else {
-                vizElement.style.width='100%';vizElement.style.height='977px';
-            }
-            var scriptElement = document.createElement('script');
-            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
+
+        <p>This view shows the number of citations in any given zip code within Los Angeles.  Click on one (or more) of
+            the Violation Description or Day of Week bars in the histograms to filter the map on those categories.  You
+            can also filter by zip code by clicking on areas within the map, or using the dropdown filters on the right
+            of the dashboard.  Interestingly, you’ll find that while Venice tops the count of parking citations issued
+            during the week, on weekends the neighborhood is not even in the top 20.
+        </p>
+
+        <br />
+
+{#        <div class='tableauPlaceholder' id='viz1555266095248' style='position: relative'>#}
+{#            <noscript>#}
+{#                <a href='#'>#}
+{#                    <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SamplePrototype&#47;Recentiteration&#47;1_rss.png' style='border: none' />#}
+{#                </a>#}
+{#            </noscript>#}
+{#            <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />#}
+{#                <param name='embed_code_version' value='3' />#}
+{#                <param name='site_root' value='' />#}
+{#                <param name='name' value='SamplePrototype&#47;Recentiteration' />#}
+{#                <param name='tabs' value='no' />#}
+{#                <param name='toolbar' value='yes' />#}
+{#                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SamplePrototype&#47;Recentiteration&#47;1.png' />#}
+{#                <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />#}
+{#                <param name='display_overlay' value='yes' />#}
+{#                <param name='display_count' value='yes' />#}
+{#            </object>#}
+{#        </div>#}
+{#        <script type='text/javascript'>#}
+{#            var divElement = document.getElementById('viz1555266095248');#}
+{#            var vizElement = divElement.getElementsByTagName('object')[0];#}
+{#            if ( divElement.offsetWidth > 800 ) {#}
+{#                vizElement.style.width='1000px';#}
+{#                vizElement.style.height='1027px';#}
+{#            } else if ( divElement.offsetWidth > 500 ) {#}
+{#                vizElement.style.width='1000px';vizElement.style.height='1027px';#}
+{#            } else {#}
+{#                vizElement.style.width='100%';vizElement.style.height='977px';#}
+{#            }#}
+{#            var scriptElement = document.createElement('script');#}
+{#            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';#}
+{#            vizElement.parentNode.insertBefore(scriptElement, vizElement);#}
+{#        </script>#}
     </section>
 
     <section id="dashboard-2">
         <h2>Average Fine by Zip Dashboard</h2>
+        <p>This view shows the average citation amount by zip codes of Los Angeles.  It is set up with the same filters
+            as the previous dashboard, allowing filters on day of week, violation type, zip code, and neighborhood.
+            Handicap parking violations appear to be the most expensive infraction, at an average of $90.90 per ticket.
+        </p>
+
+        <br />
+
         <div class='tableauPlaceholder' id='viz1555266095248' style='position: relative'>
             <noscript>
                 <a href='#'>
@@ -154,6 +183,14 @@
 
     <section id="dashboard-3">
         <h2>Maps Dashboard</h2>
+
+        <p>This dashboard allows you to zoom in on the filter on zip codes in the zip code map and zoom in on a street
+            view of the area - showing a density plot of the citations in that given zip allowing for a more granular
+            view of where the citation “hot spots” are.  For example, one can see that if they were visiting Hollywood,
+            parking near the intersection of Hollywood Blvd and North Wilton Place would be particularly tempting fate.
+        </p>
+
+        <br />
         <div class='tableauPlaceholder' id='viz1555266095248' style='position: relative'>
             <noscript>
                 <a href='#'>
@@ -196,6 +233,15 @@
 
     <section id="about">
     <h2>About</h2>
+
+        <h5>Alexandra Iov</h5>
+        <p>alexandra.iov@berkeley.edu</p>
+
+        <h5>Heather Koo</h5>
+        <p>heather.koo@berkeley.edu</p>
+
+        <h5>Ryan Delgado</h5>
+        <p>rmdelgad2013@berkeley.edu</p>
 
     </section>
 
